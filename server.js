@@ -26,13 +26,12 @@ app.post('/room', async (req, res) => {
 app.post('/device', async (req, res) => {
     try {
         console.log('Request body:', req.body);
-        const { room,device, status } = req.body;
+        const { device, status } = req.body;
         const existingDevice = await devicedetails.findOne({ devicename: device });
         if (!existingDevice) {
             console.log('Device not found: ${device}');
             return res.status(404).json({ error: 'Device not found: ${device} '});
         }
-        existingDevice.room = room;
         existingDevice.status = status;
         await existingDevice.save();
         res.status(200).send(existingDevice);
@@ -45,7 +44,7 @@ app.get("/hello", (req, res) => {
     res.end("Hello world welcom all")
 })
 // Retrieve device status
-app.get('/room/device/:room/:devicename', async (req, res) => {
+app.get('/room/device/:devicename', async (req, res) => {
     try {
         const deviceName = req.params.devicename;
         console.log('Device name requested: ${deviceName}');
