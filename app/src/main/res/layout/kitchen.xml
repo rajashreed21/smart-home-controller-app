@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Dashboard_Activity"
+    android:background="@drawable/img_2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kitchen"
+        android:textColor="#0C1D7E"
+        android:textSize="34dp" />
+
+    <TextView
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lights"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="80dp"/>
+
+    <ToggleButton
+        android:id="@+id/kitchenlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="off"
+        android:textOn="on"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/fan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Fan"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"/>
+
+    <ToggleButton
+        android:id="@+id/kitchenfan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="on"
+        android:textOff="off"
+        android:layout_marginTop="18dp"/>
+
+
+
+</LinearLayout>

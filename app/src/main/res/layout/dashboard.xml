@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:padding="25dp"/>
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:padding="12dp"
+        android:id="@+id/living"
+        android:background="@drawable/hall"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="65dp"
+        android:text="Living Room"/>
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/img"
+        android:id="@+id/bedroom"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="38mm"
+        android:text="Bed Room"/>
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:padding="12dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/kitchen"
+        android:background="@drawable/img_1"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="75dp"
+        android:text="Kitchen"/>
+
+</LinearLayout>

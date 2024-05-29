@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_2"
+    android:padding="16dp"
+    tools:context=".Login_Activity">
+
+    <TextView
+        android:layout_width="990dp"
+        android:layout_height="90dp"
+        android:text="Smart Home Controller"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="#3D5AFE"/>
+
+    <LinearLayout
+        android:layout_width="990dp"
+        android:layout_height="990dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint=" email"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/email_24"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:padding="18dp"
+            android:id="@+id/email_id"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint=" password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:drawableLeft="@drawable/password_24"
+            android:textSize="20sp"
+            android:padding="18dp"
+            android:id="@+id/pass_word"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:backgroundTint="#00B0FF"
+            android:textColor="@color/white"
+            android:padding="18dp"
+            android:layout_marginTop="32dp"
+            android:textSize="20sp"
+            android:id="@+id/login_btn"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
