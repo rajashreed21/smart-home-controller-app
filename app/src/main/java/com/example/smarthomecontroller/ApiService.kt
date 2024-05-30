@@ -7,12 +7,12 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
-    @POST("/api/device")
+    @POST("/room")
     suspend fun insertDevice(@Body device: Device): Response<Device>
 
-    @POST("/api/devices")
+    @POST("/device")
     suspend fun toggleDeviceStatus(@Body request: ToggleDeviceRequest): Response<Device>
 
-    @GET("/api/devices/{name}")
-    suspend fun getDeviceStatus(@Path("name") name: String): Response<DeviceStatusResponse>
+    @GET("/room/device/{devicename}")
+    suspend fun getDeviceStatus(@Path("devicename") name: Boolean): Response<DeviceStatusResponse>
 }

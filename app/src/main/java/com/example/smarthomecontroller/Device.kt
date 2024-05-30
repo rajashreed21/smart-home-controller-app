@@ -1,8 +1,8 @@
 package com.example.smarthomecontroller
 
 data class Device(
-    val name: String,
-    val type: String,
+    val room: String,
+    val devicename: String,
     val status: Boolean
 )
 

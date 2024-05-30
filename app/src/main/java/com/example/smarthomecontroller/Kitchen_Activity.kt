@@ -13,12 +13,32 @@ class Kitchen_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kitchen)
 
-        findViewById<ToggleButton>(R.id.kitchenlight).setOnCheckedChangeListener { _, isChecked ->
-            toggleDeviceStatus("Light", isChecked)
+        findViewById<ToggleButton>(R.id.kitchenmicro).setOnCheckedChangeListener { _, isChecked ->
+            toggleDeviceStatus("microwavekitchen", isChecked)
         }
 
-        findViewById<ToggleButton>(R.id.kitchenfan).setOnCheckedChangeListener { _, isChecked ->
-            toggleDeviceStatus("Fan", isChecked)
+        findViewById<ToggleButton>(R.id.kitchenchimney).setOnCheckedChangeListener { _, isChecked ->
+            toggleDeviceStatus("chimneykitchen", isChecked)
+        }
+        getDeviceStatus( false)
+        getDeviceStatus( false)
+        getDeviceStatus( false)
+
+        insertDevice(Device("kitchen","microwavekitchen", false))
+        insertDevice(Device("kitchen", "chimneykitchen",false))
+    }
+
+    private fun insertDevice(device: Device) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val response =
+                RetrofitInstance.api.insertDevice(device)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    // Handle success
+                } else {
+                    // Handle error
+                }
+            }
         }
     }
 
@@ -27,6 +47,21 @@ class Kitchen_Activity : AppCompatActivity() {
             val response = RetrofitInstance.api.toggleDeviceStatus(ToggleDeviceRequest(device, status))
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
+                    // Handle success
+                } else {
+                    // Handle error
+                }
+            }
+        }
+    }
+    private fun getDeviceStatus(status: Boolean) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = RetrofitInstance.api.getDeviceStatus(status)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    response.body()?.let{statusResponse->
+                        statusResponse.status
+                    }
                     // Handle success
                 } else {
                     // Handle error

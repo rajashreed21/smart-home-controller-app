@@ -16,33 +16,33 @@
         android:textSize="34dp" />
 
     <TextView
-        android:id="@+id/light"
+        android:id="@+id/door"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lights"
+        android:text="Door"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginTop="80dp"/>
 
     <ToggleButton
-        android:id="@+id/livinglight"
+        android:id="@+id/livingdoor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textOn="on"
-        android:textOff="off"
+        android:textOn="open"
+        android:textOff="close"
         android:layout_marginTop="18dp"/>
 
     <TextView
-        android:id="@+id/fan"
+        android:id="@+id/music"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Fan"
+        android:text="Music System"
         android:textSize="18sp"
         android:layout_marginTop="50dp"/>
 
     <ToggleButton
-        android:id="@+id/livingfan"
+        android:id="@+id/livingmusic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textOn="on"

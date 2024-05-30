@@ -16,16 +16,16 @@
         android:textSize="34dp" />
 
     <TextView
-        android:id="@+id/light"
+        android:id="@+id/micro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lights"
+        android:text="Microwave Oven"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginTop="80dp"/>
 
     <ToggleButton
-        android:id="@+id/kitchenlight"
+        android:id="@+id/kitchenmicro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textOff="off"
@@ -33,16 +33,16 @@
         android:layout_marginTop="18dp"/>
 
     <TextView
-        android:id="@+id/fan"
+        android:id="@+id/chimney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Fan"
+        android:text="Chimney"
         android:textSize="18sp"
         android:layout_marginTop="50dp"/>
 
     <ToggleButton
-        android:id="@+id/kitchenfan"
+        android:id="@+id/kitchenchimney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textOn="on"
